@@ -1,0 +1,8 @@
+
+= Lagrange
+== Interpolation
+* interpolate the value of y for some x, given a set of points where no 2 x'x are the same
+
+asciimath:[L(x) := sum_(j=0)^k y_j l_j(x)]
+
+asciimath:[l_j(x) := prod_(0<=m<=k,m!=k) (x - x_0)/(x_j - x_m)...(x-x_(j-1))/(x_j - x_(j-1)) (x - x_(j+1))/(x_j - x_(j+1))...(x-x_k)/(x_j - x_k)]

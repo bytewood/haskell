@@ -1,0 +1,29 @@
+= QuickCheck
+
+http://www.cse.chalmers.se/~rjmh/QuickCheck/manual.html[QuickCheck Manual]
+
+[sh]
+----
+cabal install QuickCheck
+cabal repl
+----
+
+[haskell]
+----
+import Test.QuickCheck
+
+prop xs = length $ tail xs == length xs -1
+
+quickCheck prop
+quickCheck verbose prop
+
+prop xs = not (null xs) ===> length $ tail xs === length xs -1
+quickCheck prop
+
+prop xs = collect (length xs) $ reverse xs === reverse' xs
+prop xs = classify (length xs == 0) "empty" $ reverse xs === reverse' xs
+
+quickCheck (withMaxSuccess 1000 prop)
+
+prop k v m = lookup k ((k,v):m) === Just v where types = (k :: Int, v :: Int)
+----

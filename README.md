@@ -18,6 +18,7 @@ cabal install QuickCheck
 cabal repl
 ```
 * install haskell toolstack
+* Intellij-Haskell plugin
 
 ## GHCI
 ```shell
@@ -48,9 +49,6 @@ let a = 1       - equivalent to a = 1 in a file and loading it.
 
 ```
 
-Intellij-Haskell plugin
-
-
 ## Stack Build Tool
 ```
 curl -sSL https://get.haskellstack.org/ | sh
@@ -68,7 +66,10 @@ stack ghci                      - start an interactive compiler
 ```
 
 ## Documentation
-https://hackage.haskell.org
+https://www.stackage.org        - vetted consistent packages
+https://hackage.haskell.org     - 
+https://hoogle.haskell.org      - package search engine for stackage
+
 
 
 ## IDE
